@@ -69,7 +69,7 @@ if pilihan == 'Prediksi dari file excel':
                  'fractal_dimension_worst'], data=dataku)
         st.write(dataku1)
         st.success('File berhasil diupload')
-        if st.button('Breast Cancer Classification'):
+        if st.button('Show Prediction'):
             hasil = model_final.predict(dataku)
             #st.write('Prediksi',hasil)
             # Keputusan
@@ -232,7 +232,7 @@ else:
     '''
     # Memunculkan hasil di Web 
     st.write('***'*10)
-    if st.button('Breast Cancer Classification'):
+    if st.button('Show Prediction'):
         prediksi = model_final.predict(df)
 
         if (prediksi[0] == 1):
